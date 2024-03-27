@@ -1,8 +1,13 @@
-node {
-	stage('Build') {
-		echo "Build"
-	}
-	stage('Test') {
-		echo "Test"
-	}
+// sample pipeline
+pipeline {
+    agent { docker { image 'maven:3.8.3-openjdk-17'} }
+    stages {
+        stage ( 'Build') {
+            echo .... 'maven -version'
+            sh 'maven -version'
+        }
+        stage ( 'Test') {
+            echo ...... 'run the pipeline'
+        }
+    }
 }
