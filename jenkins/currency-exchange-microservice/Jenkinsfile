@@ -1,15 +1,15 @@
 // sample pipeline
 pipeline {
-    //agent {any{ image 'maven:3.8.3-openjdk-17'}}
-	agent any
-	environment {
-		mavenHome = tool 'MAVEN'
-	}
+    agent {any{ image 'maven:3.8.3-openjdk-17'}}
+	//agent any
+	//environment {
+	//	mavenHome = tool 'MAVEN'
+	//}
     stages {
         stage ('Build') {
             steps {
 				echo "mvn --version"
-                sh 'mvn --version'
+                //sh 'mvn --version'
 			}
         }
         stage ('Test') {
