@@ -1,4 +1,6 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:17-alpine
+WORKDIR /app
+copy ..
 VOLUME /tmp
 EXPOSE 8000
 ADD target/*.jar app.jar
