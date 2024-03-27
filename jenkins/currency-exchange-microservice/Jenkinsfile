@@ -7,7 +7,7 @@ pipeline {
             sh 'mvn --version'
         }
         stage ( 'Test') {
-            echo ...... 'run the pipeline'
+            echo "run the pipeline"
         }
     }
 }
